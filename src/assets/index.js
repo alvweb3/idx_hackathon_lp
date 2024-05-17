@@ -27,6 +27,7 @@ import people03 from "./people03.png";
 import coins from "./coins.png";
 import routing from "./routing.png";
 import routing2 from "./routing2.png";
+import routing3 from "./routing3.png";
 import rtdata from "./real_time_data.png";
 
 export {
@@ -59,5 +60,6 @@ export {
   coins,
   routing,
   routing2,
+  routing3,
   rtdata,
 };
