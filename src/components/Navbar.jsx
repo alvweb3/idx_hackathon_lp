@@ -1,14 +1,16 @@
 import { useState } from "react";
-
 import styles from "../style";
 import Button from "./Button";
-
 import { close, idx_logo, menu } from "../assets";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+
+  const handleCreateIndexClick = () => {
+    window.location.href = "https://idx-hackathon-application-ts.vercel.app/";
+  };
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
@@ -27,9 +29,9 @@ const Navbar = () => {
           </li>
         ))}
 
-      <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
-        <Button buttonText="Create Index" />
-      </div>
+        <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-10`}>
+          <Button buttonText="Create Index" onClick={handleCreateIndexClick} />
+        </div>
       </ul>
       
       <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -58,7 +60,7 @@ const Navbar = () => {
               </li>
             ))}
             <div className={`${styles.flexCenter} sm:ml-10 ml-0 sm:mt-0 mt-5`}>
-              <Button buttonText="Create Index" />
+              <Button buttonText="Create Index" onClick={handleCreateIndexClick} />
             </div>
           </ul>
         </div>
